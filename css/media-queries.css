@@ -247,6 +247,7 @@
     section.question
     {
         font-size: 180%;
+        margin-top: 10px;
     }
 
     section.question h2
@@ -256,7 +257,7 @@
 
     section.question h3
     {
-        margin-bottom: 0px;
+        margin-bottom: 10px;
     }
 
     div.answers
@@ -274,6 +275,22 @@
         position: relative;
         top: 10px;
         font-size: 150%;
+    }
+
+    section.buttons
+    {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        position: relative;
+        bottom: 550px;
+        margin-bottom: 15px;
+    }
+
+    section.buttons > button
+    {
+        font-size: 40px;
     }
 
     #result-picture
@@ -344,16 +361,6 @@
     #emoji
     {
         font-size: 200%;
-    }
-
-    section.buttons
-    {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        flex-direction: row-reverse;
-        position: relative;
-        bottom: 500px;
     }
 
     section.buttons > button
