@@ -1,0 +1,66 @@
+section.buttons > button, #again
+{
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-family: Garamond, serif;
+    transition: transform 0.2s;
+    transition-timing-function: ease-in;
+}
+
+section.buttons > button:disabled
+{
+    background-color: rgb(214,214,214) !important;
+    cursor: not-allowed;
+}
+
+#next
+{
+    background-color: rgb(36, 169, 36);
+}
+
+#back
+{
+    background-color: rgb(58, 187, 230);
+}
+
+#again
+{
+    background-color: rgb(188, 11, 26);
+}
+
+/* Allow Pseudo selectors on active buttons because they will never be disabled */
+#again:hover
+{
+    cursor: pointer;
+    transform: rotateX(30deg);
+    background-color: rgb(226, 23, 40);
+}
+
+#again:active
+{
+    transform: scale(1.2);
+}
+/*
+section.buttons > button:hover
+{
+    cursor: pointer;
+    transform: rotateX(30deg);
+}
+
+section.buttons > button:active
+{
+    transform: scale(1.2);
+}
+
+#next:hover
+{
+    background-color: rgb(49, 210, 49);
+}
+
+
+#back:hover
+{
+    background-color: rgb(65, 206, 252);
+}
+*/

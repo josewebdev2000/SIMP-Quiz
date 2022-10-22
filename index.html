@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--Notes-->
+<!--Make a Next Button and a Back Button-->
+<!--Make a Submit Button to take the Final Score-->
+<!--Have ONLY one question in HTML and change the contents using JS-->
+
+<!--Max Width of any device using this short app should be 660px wide and 580px long-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <!--For Responsiveness-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/results.css">
+        <link rel="stylesheet" href="css/media-queries.css">
+        <link rel="stylesheet" href="css/buttons.css">
+
+        <title>SIMP Quiz</title>
+
+    </head>
+
+    <body>
+
+        <!--What to display if user devices is outside from acceptable dimension range-->
+        <div class="unfit">
+            <h1>Oooops</h1>
+            <p><span style='font-size:100px;'>&#128557;</span></p>
+            <h3>Your device does not fit the required dimension standards for this web app</h3>
+        </div>
+
+        <!--Used to apply special paddings and margins-->
+        <main>
+
+            <!--Introduces the Quiz to the User-->
+            <header>
+                <h1>SIMP Quiz</h1>
+                <h2>Are U a SIMP?</h2>
+                <p id="emoji">&#128551;</p>
+                <p>Take this quiz to find out</p>
+            </header>
+
+            <!--Questions to make to the user-->
+            <!--They'll be dinamically changed using JS-->
+            <section class="question">
+
+                <h2></h2>
+
+                <h3></h3>
+
+                <!--Possible answers for this question-->
+                <div class="answers">
+                    <ol class="ans-grid">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+
+            </section>
+
+            <!--Show Quiz results to the user-->
+            <section class="result">
+
+                <h1>SIMP Results</h1>
+                <h2 id="result-heading"></h2>
+                <img id="result-picture" src="" alt="SIMP RESULT">
+
+                <!--Ask the user to play again-->
+                <button id="again" type="button">Take The Quiz Again</button>
+
+                <!--Create a div to give a description about SIMP results-->
+                <div class="description">
+                    <h3>Your features</h3>
+                    <ul class="desc-list">
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                        <li><p></p></li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!--Allow the user to advance or go back through the questions-->
+            <section class="buttons">
+                <button id="next" type="button">Next</button>
+                <button id="back" type="button">Back</button>
+            </section>
+
+        </main>
+
+        <!--Use the JS file -->
+        <script src="index.js"></script>
+        <script src="js/questions.js"></script>
+        <script src="js/display-q.js"></script>
+        <script src="js/answer-q.js"></script>
+        <script src="js/style-btn.js"></script>
+        <script src="js/results-d.js"></script>
+        <script src="js/calculateResult.js"></script>
+    </body>
+</html>

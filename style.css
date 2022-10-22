@@ -1,0 +1,113 @@
+
+/* Font Faces */
+@font-face
+{
+    font-family: sugarpunch;
+    src: url("fonts/sugarpunch-demo/SugarpunchDEMO.otf");
+}
+
+/* Proper CSS Styling */
+* 
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background-image: url("pics/notebook-background.png");
+    background-size: 100vw 150vh;
+    background-repeat: no-repeat;
+    font-family: sugarpunch;
+    margin: 20px 40px;
+}
+
+section.result
+{
+    display: none;
+}
+
+div.unfit
+{
+    display: none;
+}
+
+header
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-family: sugarpunch;
+}
+/* Only show the Next button for the first page*/
+header h2
+{
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+  
+  @keyframes shake 
+{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+section.question
+{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section.result
+{
+    display: none;
+}
+
+div.answers
+{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-right: 50px;
+}
+
+div ol
+{
+    list-style: none;
+    counter-reset: steps;
+}
+
+div ol li
+{
+    counter-increment: steps;
+    transition: transform 0.1s;
+    transition-timing-function: ease-out;
+
+}
+
+div ol li::before
+{
+  content: counter(steps) ")";
+  margin-right: 0.5rem;
+  margin-bottom: 0.2rem;
+  color: rgb(0,0,0);
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-grid;
+  place-items: center;
+  line-height: 1.2em;
+}
+
+/* Used to mark the option the user chose */
+.clicked, .clicked::before
+{
+    color:rgb(63, 182, 221) !important;
+}

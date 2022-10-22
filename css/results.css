@@ -1,0 +1,10 @@
+section.result
+{
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.desc-list
+{
+    list-style-type: none;
+}
