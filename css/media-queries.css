@@ -283,8 +283,6 @@
         flex-flow: row nowrap;
         justify-content: space-around;
         flex-direction: row-reverse;
-        position: relative;
-        bottom: 550px;
         margin-bottom: 15px;
     }
 
